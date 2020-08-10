@@ -32,7 +32,7 @@ function getMySalary() {
   setInterval(() => {
     salary = Math.floor(Math.random() * (2000 - 1500) + 1500);
     taxes = +(this.tax * salary).toFixed(2);
-    profit = salary - taxes;
+    profit = +(salary - taxes).toFixed(2);
     let salaryInfo = {
       salary: salary,
       taxes: taxes,
