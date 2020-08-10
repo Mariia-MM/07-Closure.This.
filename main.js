@@ -29,5 +29,13 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
 // function#4
 
 function getMySalary() {
-  salary=
+  salary = Math.floor(Math.random() * (2000 - 1500) + 1500);
+  taxes = this.tax * salary;
+  profit = salary - taxes;
+  return console.log({
+    salary: salary,
+    taxes: taxes,
+    profit: profit,
+  });
 }
+getMySalary.call(ukraine);
