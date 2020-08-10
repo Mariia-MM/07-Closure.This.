@@ -16,15 +16,15 @@ function getMiddleTaxes() {
   middleTaxes = (this.tax * this.middleSalary).toFixed(2);
   return console.log(`Middle taxes:`, middleTaxes);
 }
-getMiddleTaxes.call(litva);
+[ukraine, latvia, litva].forEach((country) => getMiddleTaxes.call(country));
 
 // function#3
 
 function getTotalTaxes() {
   totalTaxes = this.tax * this.middleSalary * this.vacancies;
-  return console.log(`Total taxes:`, totalTaxes);
+  return console.log(`Total taxes :`, totalTaxes);
 }
-getTotalTaxes.call(ukraine);
+[ukraine, latvia, litva].forEach((country) => getTotalTaxes.call(country));
 
 // function#4
 
