@@ -5,26 +5,28 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
 // function#1
 
 function getMyTaxes(salary) {
-  myTaxes = (this.tax * salary).toFixed(2);
-  return console.log(`My taxes:`, myTaxes);
+  return (this.tax * salary).toFixed(2);
 }
-getMyTaxes.call(latvia, 1000);
+console.log(`My taxes:`, getMyTaxes.call(latvia, 1000));
 
 // function#2
 
 function getMiddleTaxes() {
-  middleTaxes = (this.tax * this.middleSalary).toFixed(2);
-  return console.log(`Middle taxes:`, middleTaxes);
+  return (this.tax * this.middleSalary).toFixed(2);
 }
-[ukraine, latvia, litva].forEach((country) => getMiddleTaxes.call(country));
+
+[ukraine, latvia, litva].forEach((country) =>
+  console.log(`Middle taxes:`, getMiddleTaxes.call(country))
+);
 
 // function#3
 
 function getTotalTaxes() {
-  totalTaxes = this.tax * this.middleSalary * this.vacancies;
-  return console.log(`Total taxes :`, totalTaxes);
+  return this.tax * this.middleSalary * this.vacancies;
 }
-[ukraine, latvia, litva].forEach((country) => getTotalTaxes.call(country));
+[ukraine, latvia, litva].forEach((country) =>
+  console.log(`Total taxes :`, getTotalTaxes.call(country))
+);
 
 // function#4
 
